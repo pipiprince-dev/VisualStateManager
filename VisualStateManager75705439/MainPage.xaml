@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisualStateManager75705439.MainPage"
+             xmlns:custom_components="clr-namespace:VisualStateManager75705439">
+
+    <ContentPage.Resources>
+        <Style TargetType="custom_components:SnowConditionInputButton">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter TargetName="myBorder" Property="Border.Stroke" Value="{StaticResource Primary}" />
+                                <Setter TargetName="myBorder" Property="Border.BackgroundColor" Value="{AppThemeBinding Light={StaticResource White},Dark={StaticResource Black}}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
+
+
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <CollectionView 
+                        ItemsSource="{Binding ItemCollection}"
+                        SelectionMode="Single" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <custom_components:SnowConditionInputButton>
+                            <!--<VisualStateManager.VisualStateGroups>
+                                <VisualStateGroupList>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal" />
+                                        <VisualState x:Name="Selected">
+                                            <VisualState.Setters>
+                                                <Setter TargetName="myBorder" Property="Border.Stroke" Value="{StaticResource Primary}" />
+                                                <Setter TargetName="myBorder" Property="Border.BackgroundColor" Value="{AppThemeBinding Light={StaticResource White},Dark={StaticResource Black}}" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateGroupList>
+                            </VisualStateManager.VisualStateGroups>-->
+                        </custom_components:SnowConditionInputButton>
+
+
+
+
+
+                    <!--<Border StrokeShape="RoundRectangle 10" StrokeThickness="2" Margin="4,0,4,0">
+                        <Label Text="{Binding Name}"/>
+
+                        <Image Source="{Binding IconFileName}" Margin="6,6,6,6" WidthRequest="35" HeightRequest="35" VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image.Behaviors>
+                                <mct:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"/>
+                            </Image.Behaviors>
+                        </Image>
+                    </Border>-->
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+
+
+</ContentPage>
+

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisualStateManager75705439.SnowConditionInputButton">
+
+
+
+    <Border  x:Name="myBorder"  StrokeShape="RoundRectangle 10" StrokeThickness="2" Margin="4,0,4,0" HeightRequest="50" >
+
+
+        <!--<Image Source="{Binding IconFileName}" Margin="6,6,6,6" WidthRequest="35" HeightRequest="35" VerticalOptions="Center" HorizontalOptions="Center">
+            <Image.Behaviors>
+                <mct:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource Black},Dark={StaticResource White}}"/>
+            </Image.Behaviors>
+        </Image>-->
+    </Border>
+</ContentView>
+
